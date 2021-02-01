@@ -39,7 +39,7 @@ async def rclone_upload(path,message,user_msg,dest_drive,dest_base,edit_time,con
     data = "upcancel {} {} {}".format(omsg.chat_id,omsg.id,omsg.sender_id)
     buts = [KeyboardButtonCallback("Cancel upload.",data.encode("UTF-8"))]
     
-    msg = await message.reply("<b>Uploading to configured drive.... will be updated soon.",parse_mode="html", buttons=buts)
+    msg = await message.reply("<b>Uploading to configured drive in background mode........",parse_mode="html", buttons=buts)
     if os.path.isdir(path):
         # handle dirs
         new_dest_base = os.path.join(dest_base,os.path.basename(path))
@@ -68,7 +68,7 @@ async def rclone_upload(path,message,user_msg,dest_drive,dest_base,edit_time,con
         torlog.info(f"Upload folder id :- {gid}")
         
         folder_link = f"https://drive.google.com/folderview?id={gid}"
-        txtmsg = "<a href='tg://user?id={}'>Done</a>\n#uploads\nUPLOADED FOLDER :-<code>{}</code>\nTo Drive.".format(omsg.sender_id,os.path.basename(path))
+        txtmsg = "<a href='tg://user?id={}'>Done</a>\n<a href='https://groups.google.com/g/troymods'>Join This Link to Download From Google Drive</a>\n#uploads\nUPLOADED FOLDER :-<code>{}</code>\nTo Drive.".format(omsg.sender_id,os.path.basename(path))
         
         await omsg.reply(txtmsg,buttons=[[KeyboardButtonUrl("Drive URL",folder_link)]],parse_mode="html")
         await msg.delete()
