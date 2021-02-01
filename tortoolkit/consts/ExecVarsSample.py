@@ -5,12 +5,12 @@ except:
         # TODO optimize for vps use fully - currently only heroku is focused
         # Set true if its VPS [currently not fully working]
         IS_VPS = False
-        API_HASH = ""
-        API_ID = ""
-        BOT_TOKEN = ""
-        BASE_URL_OF_BOT = ""
+        API_HASH = "26921ac780721f69c28450dd52b4079c"
+        API_ID = "721850"
+        BOT_TOKEN = "1340054732:AAHy_wu7_LCtr_gQPdbgswfTL0QIyIaEzBU"
+        BASE_URL_OF_BOT = "https://tes7.herokuapp.com"
         # ALLOWED USERS [ids of user or supergroup] seperate by commas
-        ALD_USR = [1147526472]
+        ALD_USR = "-1001188542436 628215130
         
         # Time to wait before edit message
         EDIT_SLEEP_SECS = 40
@@ -28,7 +28,7 @@ except:
         REMAINING_STR = "⚪"
 
         # DB URI for access
-        DB_URI = ""
+        DB_URI = "postgres://cvwlbdtqybtebm:cbc1b42da92982108434e4854f9c28e12d08fdad6c39754401547f97fc29f49b@ec2-54-196-1-212.compute-1.amazonaws.com:5432/datd6okgst898a"
         
         # The base direcory to which the files will be upload if using RCLONE
         RCLONE_BASE_DIR = "/"
